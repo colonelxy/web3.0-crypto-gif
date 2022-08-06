@@ -3,21 +3,23 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 import './index.css';
-import { TransactionProvider } from './context/TransactionContext';
+import { TransactionsProvider } from './context/TransactionContext';
 
 
-ReactDOM.render(
-  <TransactionProvider>
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <TransactionsProvider>
+    <React.StrictMode>
     <App />
-  </TransactionProvider>,
-  document.getElementById("root"),
-);
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <TransactionProvider>
-//     <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
+  </React.StrictMode>
 
-//   </TransactionProvider>
+  </TransactionsProvider>
   
+);
+
+// ReactDOM.render(
+//   <TransactionsProvider>
+//     <App />
+//   </TransactionsProvider>,
+//   document.getElementById("root"),
 // );
